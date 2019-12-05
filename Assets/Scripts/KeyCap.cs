@@ -8,7 +8,9 @@ public class KeyCap : MonoBehaviour
     public float maxPos, minPos, activationPoint;
     public int downSpeed = 5, upSpeed = 10;
     public BounceForce bf;
-    
+    public Material regularMat;
+    public Material selectedMat;
+
     private AudioSource _audioData;
     private Vector3 _targetPos;
     private bool _sceneTransitioning = false;
@@ -56,5 +58,17 @@ public class KeyCap : MonoBehaviour
                 _sceneTransitioning = true;
             }
         }
+    }
+
+    public void SelectKey()
+    {
+        GetComponent<Renderer>().material = selectedMat;
+        tag = "Goal";
+    }
+    
+    public void DeselectKey()
+    {
+        GetComponent<Renderer>().material = regularMat;
+        tag = "Untagged";
     }
 }
