@@ -11,6 +11,10 @@ public class Sphere : MonoBehaviour
     private Rigidbody _rb;
     
     // Start is called before the first frame update
+
+    [SerializeField]
+    private float forceDown;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -19,9 +23,9 @@ public class Sphere : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        _rb.AddForce(0, -forceDown, 0);
     }
 
     void OnTriggerEnter(Collider other)
