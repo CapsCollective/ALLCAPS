@@ -34,3 +34,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# IDEA IDE Files
+.idea
+.idea/*
