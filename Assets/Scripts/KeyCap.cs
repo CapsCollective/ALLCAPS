@@ -21,7 +21,7 @@ public class KeyCap : MonoBehaviour
         _targetPos = transform.localPosition;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         var initialPosY = transform.localPosition.y;
         var speed = 0;
