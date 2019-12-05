@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Timer : MonoBehaviour
         currentTime -= Time.deltaTime;
         if (currentTime <= 0)
         {
-            Debug.Log("Game Over");
+            SceneManager.LoadScene("Menu");
         }
         transform.localScale = new Vector3(0.95f * currentTime/ maxTime, 0.8f, 0.1f);
     }
