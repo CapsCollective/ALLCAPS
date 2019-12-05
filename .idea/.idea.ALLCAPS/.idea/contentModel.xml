@@ -13,6 +13,7 @@
           </e>
           <e p="Keybooard.cs" t="Include" />
           <e p="KeyCap.cs" t="Include" />
+          <e p="Sphere.cs" t="Include" />
           <e p="Tilt.cs" t="Include" />
         </e>
       </e>
