@@ -17,6 +17,9 @@ public class KeyCap : MonoBehaviour
     [SerializeField]
     private int upSpeed = 10;
 
+    [SerializeField]
+    private BounceForce bf;
+
     private void Start()
     {
         _audioData = GetComponent<AudioSource>();
@@ -36,6 +39,7 @@ public class KeyCap : MonoBehaviour
         {
             _targetPos.y = maxPos;
             speed = upSpeed;
+            bf.ApplyForce(transform.localPosition.y - maxPos);
         }
         transform.localPosition = Vector3.Lerp(transform.localPosition, _targetPos, speed * Time.deltaTime);
 
