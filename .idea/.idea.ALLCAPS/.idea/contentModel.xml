@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Ben Kelly\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ben Kelly\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_ALLCAPS.-2095459468.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Ben Kelly\Programming\ALLCAPS" t="IncludeRecursive">
+      <e p="ALLCAPS.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="EasyScripts" t="Include">
+            <e p="HideOnStart.cs" t="Include" />
+          </e>
+          <e p="Keybooard.cs" t="Include" />
+          <e p="KeyCap.cs" t="Include" />
+          <e p="Sphere.cs" t="Include" />
+          <e p="Tilt.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
