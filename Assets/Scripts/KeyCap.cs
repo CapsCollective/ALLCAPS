@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 
 public class KeyCap : MonoBehaviour
 {
@@ -12,6 +11,7 @@ public class KeyCap : MonoBehaviour
     
     private AudioSource _audioData;
     private Vector3 _targetPos;
+    private bool _sceneTransitioning = false;
     
     private void Start()
     {
@@ -25,8 +25,9 @@ public class KeyCap : MonoBehaviour
         var speed = 0;
 
         
-        if (((Input.GetKey(key) && !isMainMenu)|| (Input.GetKey(KeyCode.Space) && isMainMenu) ) && transform.localPosition.y > minPos)
+        if (Input.GetKey(key) && transform.localPosition.y > minPos)
         {
+
             _targetPos.y = minPos;
             speed = downSpeed;
         }
@@ -39,11 +40,21 @@ public class KeyCap : MonoBehaviour
                 bf.ApplyForce(transform.localPosition.y - maxPos);
             }
         }
+        
+        if (isMainMenu && _sceneTransitioning && transform.localPosition.y > -1)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        }
+
         transform.localPosition = Vector3.Lerp(transform.localPosition, _targetPos, speed * Time.deltaTime);
 
         if (initialPosY > activationPoint && transform.localPosition.y < activationPoint)
         {
             _audioData.Play(0);
+            if (isMainMenu)
+            {
+                _sceneTransitioning = true;
+            }
         }
     }
 }

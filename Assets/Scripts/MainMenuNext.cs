@@ -14,6 +14,6 @@ public class MainMenuNext : MonoBehaviour
     IEnumerator NewWait ()
     {
         yield return new WaitForSeconds(0.2f);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
     }
 }
