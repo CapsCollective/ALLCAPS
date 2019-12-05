@@ -6,22 +6,13 @@ public class KeyCap : MonoBehaviour
 
     public bool isMainMenu;
     public string key;
-    public float maxPos;
-    public float minPos;
-    public float activationPoint;
+    public float maxPos, minPos, activationPoint;
+    public int downSpeed = 5, upSpeed = 10;
+    public BounceForce bf;
     
     private AudioSource _audioData;
     private Vector3 _targetPos;
-
-    [SerializeField]
-    private int downSpeed = 5;
-
-    [SerializeField]
-    private int upSpeed = 10;
-
-    [SerializeField]
-    private BounceForce bf;
-
+    
     private void Start()
     {
         _audioData = GetComponent<AudioSource>();
@@ -44,7 +35,9 @@ public class KeyCap : MonoBehaviour
             _targetPos.y = maxPos;
             speed = upSpeed;
             if (bf != null)
-            bf.ApplyForce(transform.localPosition.y - maxPos);
+            {
+                bf.ApplyForce(transform.localPosition.y - maxPos);
+            }
         }
         transform.localPosition = Vector3.Lerp(transform.localPosition, _targetPos, speed * Time.deltaTime);
 
