@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class Sphere : MonoBehaviour
@@ -24,7 +25,7 @@ public class Sphere : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _timer = GameObject.Find("Timer").GetComponent<Timer>();
         _score = GameObject.Find("Score").GetComponent<Score>();
-        _keys = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => obj.name == "Key").ToArray();
+        _keys = FindObjectsOfType<GameObject>().Where(obj => obj.name == "Key").ToArray();
         _selectedKey = _keys[Random.Range(0, _keys.Length)].GetComponent<KeyCap>();
         _selectedKey.SelectKey();
     }
@@ -44,7 +45,6 @@ public class Sphere : MonoBehaviour
             _timer.AddTime(-2);
         } else if (collision.collider.CompareTag("Goal"))
         {
-            Debug.Log("GOAL!");
             _timer.AddTime(4);
             _score.AddScore(1);
             _selectedKey.DeselectKey();
