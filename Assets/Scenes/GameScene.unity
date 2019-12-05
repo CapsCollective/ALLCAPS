@@ -6208,6 +6208,21 @@ PrefabInstance:
       propertyPath: ballRigid
       value: 
       objectReference: {fileID: 1308282548}
+    - target: {fileID: 1510715463062019071, guid: 5f72bb71ffc0b3e4bad71e36fa603284,
+        type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510715463062019071, guid: 5f72bb71ffc0b3e4bad71e36fa603284,
+        type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510715463062019071, guid: 5f72bb71ffc0b3e4bad71e36fa603284,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1547225431497132225, guid: 5f72bb71ffc0b3e4bad71e36fa603284,
         type: 3}
       propertyPath: ballRigid
