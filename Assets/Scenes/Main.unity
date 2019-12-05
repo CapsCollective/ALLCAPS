@@ -12646,6 +12646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443ce986507e34d058822124d58da848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colourOffset: 0.2
   timer: {fileID: 831091347}
 --- !u!23 &1980967084
 MeshRenderer:
