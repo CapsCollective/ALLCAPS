@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: f1b5abe0cfc99684cb81140d60cb9ccf
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: BaseOne
+  fontNames:
+  - BaseOne
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: abfba424f613e0f43ba6d6a6fba06368, type: 3}
+  - {fileID: 12800000, guid: 644a735cbb240f349bd6aac37bf5b6e4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Tilt : MonoBehaviour
 {
-	private Rigidbody rb;
+	private Rigidbody _rb;
 	public float speedH, speedV;
 	// Start is called before the first frame update
 	void Start()
 	{
-		rb = GetComponent<Rigidbody>();
+		_rb = GetComponent<Rigidbody>();
 	}
 
 	// Update is called once per frame
@@ -17,7 +17,7 @@ public class Tilt : MonoBehaviour
 	{
 		float h = Input.GetAxis("Horizontal") * Time.deltaTime * speedH;
 		float v = Input.GetAxis("Vertical") * Time.deltaTime * speedV;
-		rb.AddTorque(new Vector3(v, 0, -h));
+		_rb.AddTorque(new Vector3(v, 0, -h));
 
 	}
 }
