@@ -121,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 8608931178410238824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.93, y: 0.93, z: 0.93}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
   - {fileID: 4976548550211750956}
   m_Father: {fileID: 0}
@@ -256,5 +256,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballRigid: {fileID: 0}
   distanceThreshold: 2
-  forceAmount: 19
+  forceAmount: 30
   upness: 5
