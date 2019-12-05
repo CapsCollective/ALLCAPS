@@ -8,8 +8,12 @@ public class KeyCap : MonoBehaviour
     
     
     private Vector3 _targetPos;
-    private const int DownSpeed = 5;
-    private const int UpSpeed = 10;
+
+    [SerializeField]
+    private int DownSpeed = 5;
+
+    [SerializeField]
+    private int UpSpeed = 10;
 
     private void Start()
     {

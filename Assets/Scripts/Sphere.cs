@@ -22,7 +22,7 @@ public class Sphere : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Death Plane")
+        if (other.name == "DeathPlane")
         {
             _rb.velocity = Vector3.zero;
             transform.position = resetPos;

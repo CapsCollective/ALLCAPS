@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Lazor
-  m_Shader: {fileID: 4800000, guid: f6a68a66f5c46e24ebf85360d4fd7f38, type: 3}
+  m_Shader: {fileID: 4800000, guid: 42c2990a8aab0794895d64cce7f6371b, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -90,7 +90,7 @@ Material:
     - _V_SSS_Rim_Pow: 2
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.9433962, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _TransColor: {r: 1, g: 1, b: 1, a: 1}
     - _V_SSS_Rim_Color: {r: 1, g: 1, b: 1, a: 1}
