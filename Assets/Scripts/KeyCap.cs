@@ -4,18 +4,11 @@ using UnityEngine.Serialization;
 public class KeyCap : MonoBehaviour
 {
     public string key;
-    public float maxPos;
-    public float minPos;
-    public float activationPoint;
+    public float maxPos, minPos, activationPoint;
+    public int downSpeed, upSpeed;
     
     private AudioSource _audioData;
     private Vector3 _targetPos;
-
-    [SerializeField]
-    private int downSpeed = 5;
-
-    [SerializeField]
-    private int upSpeed = 10;
 
     private void Start()
     {
