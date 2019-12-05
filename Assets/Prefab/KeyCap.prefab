@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 
-  maxPos: 0
+  maxPos: 1
   minPos: -1
   activationPoint: -0.75
   downSpeed: 12
