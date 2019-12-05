@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 8608931178410238823}
   - component: {fileID: 7165195638040017884}
   - component: {fileID: 8642460462506037528}
+  - component: {fileID: 4045664240531241666}
   m_Layer: 0
   m_Name: KeyCap
   m_TagString: Untagged
@@ -144,6 +145,7 @@ MonoBehaviour:
   activationPoint: -0.5
   downSpeed: 12
   upSpeed: 20
+  bf: {fileID: 4045664240531241666}
 --- !u!82 &8642460462506037528
 AudioSource:
   m_ObjectHideFlags: 0
@@ -157,7 +159,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 889bbb972df74464eac83392a7d3ba11, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.09
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -240,3 +242,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4045664240531241666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8608931178410238824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61fbfddcc8097d4fa65191c08cd0936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRigid: {fileID: 0}
+  distanceThreshold: 2
+  forceAmount: 19
+  upness: 5

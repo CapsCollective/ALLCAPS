@@ -6,18 +6,26 @@ using UnityEngine;
 public class Sphere : MonoBehaviour
 {
     public Vector3 resetPos;
-
+    private Timer _timer;
+    private Score _score;
     private Rigidbody _rb;
+    
     // Start is called before the first frame update
+
+    [SerializeField]
+    private float forceDown;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _timer = GameObject.Find("Timer").GetComponent<Timer>();
+        _score = GameObject.Find("Score").GetComponent<Score>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        _rb.AddForce(0, -forceDown, 0);
     }
 
     void OnTriggerEnter(Collider other)
@@ -26,6 +34,11 @@ public class Sphere : MonoBehaviour
         {
             _rb.velocity = Vector3.zero;
             transform.position = resetPos;
+            _timer.AddTime(-2);
+        } else if (other.CompareTag("Goal"))
+        {
+            _timer.AddTime(4);
+            _score.AddScore(1);
         }
     }
 }

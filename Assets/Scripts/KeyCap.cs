@@ -3,13 +3,16 @@ using UnityEngine.Serialization;
 
 public class KeyCap : MonoBehaviour
 {
+
+    public bool isMainMenu;
     public string key;
     public float maxPos, minPos, activationPoint;
-    public int downSpeed, upSpeed;
+    public int downSpeed = 5, upSpeed = 10;
+    public BounceForce bf;
     
     private AudioSource _audioData;
     private Vector3 _targetPos;
-
+    
     private void Start()
     {
         _audioData = GetComponent<AudioSource>();
@@ -20,7 +23,9 @@ public class KeyCap : MonoBehaviour
     {
         var initialPosY = transform.localPosition.y;
         var speed = 0;
-        if (Input.GetKey(key) && transform.localPosition.y > minPos)
+
+        
+        if (((Input.GetKey(key) && !isMainMenu)|| (Input.GetKey(KeyCode.Space) && isMainMenu) ) && transform.localPosition.y > minPos)
         {
             _targetPos.y = minPos;
             speed = downSpeed;
@@ -29,6 +34,10 @@ public class KeyCap : MonoBehaviour
         {
             _targetPos.y = maxPos;
             speed = upSpeed;
+            if (bf != null)
+            {
+                bf.ApplyForce(transform.localPosition.y - maxPos);
+            }
         }
         transform.localPosition = Vector3.Lerp(transform.localPosition, _targetPos, speed * Time.deltaTime);
 
