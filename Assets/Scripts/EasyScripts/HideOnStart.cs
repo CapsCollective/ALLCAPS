@@ -2,19 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyCap : MonoBehaviour
+public class HideOnStart : MonoBehaviour
 {
-    public char keyChar;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
