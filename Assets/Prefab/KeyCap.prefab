@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 
-  maxPos: 1
+  maxPos: 0
   minPos: -1
   activationPoint: -0.75
   downSpeed: 12
@@ -256,5 +256,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballRigid: {fileID: 0}
   distanceThreshold: 2
-  forceAmount: 20
-  upness: 9
+  forceAmount: 19
+  upness: 5
