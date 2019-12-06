@@ -10,16 +10,18 @@ public class GameOverlay : MonoBehaviour
     private void Start()
     {
         _timer = timer.GetComponent<Timer>();
-        Debug.Log(_timer.maxTime);
         _meshRenderer = GetComponent<MeshRenderer>();
     }
-
-    // Update is called once per frame
+    
     private void Update()
     {
-        var percent = 1 - (_timer.currentTime / _timer.maxTime) - colourOffset;
+        var percentRemaining = 1 - (_timer.currentTime / _timer.maxTime);
+        var newAlpha = percentRemaining - 
+                           Mathf.PingPong(Time.time * 
+                                          Mathf.Clamp(percentRemaining/2,0.0f, 0.5f), 
+                               colourOffset);
         var color = _meshRenderer.material.color;
-        color.a = percent;
+        color.a = newAlpha;
         _meshRenderer.material.color = color;
     }
 }
