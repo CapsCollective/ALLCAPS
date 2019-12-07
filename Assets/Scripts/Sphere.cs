@@ -14,6 +14,7 @@ public class Sphere : MonoBehaviour
     private Rigidbody _rb;
     private GameObject[] _keys;
     private KeyCap _selectedKey;
+    private AudioSource _dingSound;
     
     // Start is called before the first frame update
 
@@ -23,6 +24,7 @@ public class Sphere : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _dingSound = GetComponent<AudioSource>();
         _timer = GameObject.Find("Timer").GetComponent<Timer>();
         _score = GameObject.Find("Score").GetComponent<Score>();
         _keys = FindObjectsOfType<GameObject>().Where(obj => obj.name == "Key").ToArray();
@@ -45,6 +47,7 @@ public class Sphere : MonoBehaviour
             _timer.AddTime(-2);
         } else if (collision.collider.CompareTag("Goal"))
         {
+            _dingSound.Play(0);
             _timer.AddTime(4);
             _score.AddScore(1);
             _selectedKey.DeselectKey();

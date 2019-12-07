@@ -11,13 +11,13 @@ public class KeyCap : MonoBehaviour
     public Material regularMat;
     public Material selectedMat;
 
-    private AudioSource _audioData;
+    private AudioSource _clickSound;
     private Vector3 _targetPos;
     private bool _sceneTransitioning = false;
     
     private void Start()
     {
-        _audioData = GetComponent<AudioSource>();
+        _clickSound = GetComponent<AudioSource>();
         _targetPos = transform.localPosition;
     }
 
@@ -52,7 +52,7 @@ public class KeyCap : MonoBehaviour
 
         if (initialPosY > activationPoint && transform.localPosition.y < activationPoint)
         {
-            _audioData.Play(0);
+            _clickSound.Play(0);
             if (isMainMenu)
             {
                 _sceneTransitioning = true;
