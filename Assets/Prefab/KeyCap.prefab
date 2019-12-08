@@ -50,9 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainMenu: 0
   key: 
-  maxPos: 0
-  minPos: -1
-  activationPoint: -0.5
+  keyTravel: 1
+  activationPoint: 0.5
   downSpeed: 12
   upSpeed: 20
   bf: {fileID: 4045664240531241666}

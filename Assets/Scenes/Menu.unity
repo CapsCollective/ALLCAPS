@@ -5743,9 +5743,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainMenu: 1
   key: space
-  maxPos: -40
-  minPos: -60
-  activationPoint: -50
+  keyTravel: 8
+  activationPoint: 0.3
   downSpeed: 5
   upSpeed: 10
   bf: {fileID: 0}
