@@ -43,7 +43,7 @@ public class KeyCap : MonoBehaviour
             }
         }
         
-        if (isMainMenu && _sceneTransitioning && transform.localPosition.y > -1)
+        if (isMainMenu && _sceneTransitioning && transform.localPosition.y > maxPos-1)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
         }
