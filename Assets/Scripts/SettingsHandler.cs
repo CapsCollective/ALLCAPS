@@ -75,7 +75,7 @@ public class SettingsHandler : MonoBehaviour
 
     public void SetSound()
     {
-        AudioListener.volume = masterVolume;
+        AudioListener.volume = _volumeSlider.value;
     }
     
 }
