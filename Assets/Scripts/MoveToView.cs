@@ -7,12 +7,13 @@ public class MoveToView : MonoBehaviour
     
     public void ViewSettings()
     {
-        Debug.Log("Move");
+        GetComponent<AudioSource>().Play(0); 
         StartCoroutine(Move(settingsPos));
     }
     
     public void ViewMenu()
     {
+        GetComponent<AudioSource>().Play(0); 
         StartCoroutine(Move(menuPos));
     }
 
