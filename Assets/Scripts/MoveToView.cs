@@ -9,12 +9,14 @@ public class MoveToView : MonoBehaviour
     {
         GetComponent<AudioSource>().Play(0); 
         StartCoroutine(Move(settingsPos));
+        GameObject.Find("Key").GetComponent<KeyCap>().enabled = false;
     }
     
     public void ViewMenu()
     {
         GetComponent<AudioSource>().Play(0); 
         StartCoroutine(Move(menuPos));
+        GameObject.Find("Key").GetComponent<KeyCap>().enabled = true;
     }
 
     private IEnumerator Move(Vector3 targetPos)
